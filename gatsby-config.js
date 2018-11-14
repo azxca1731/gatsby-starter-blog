@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    title: 'Nogada Develop Blog',
+    author: 'Junghun Lee',
+    description: 'Develop & Tech',
+    siteUrl: 'https://azxca1731.netlify.com/',
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
@@ -58,6 +58,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify`,
+    `styled-jsx/babel`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-typography',
