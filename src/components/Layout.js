@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../assets/bootstrap.min.css'
 import { Container, Row, Col } from 'reactstrap'
 import Header from './Header'
 import RightBar from './RightBar'
