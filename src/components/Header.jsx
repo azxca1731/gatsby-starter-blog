@@ -6,7 +6,7 @@ const Header = () => {
     <div className="Header d-flex justify-content-between">
       <div className="text-left align-items-center">
         <h1>Nogada Develop Blog</h1>
-        <h4 className="mt-2">powered by GatsBy</h4>
+        <h5 className="mt-2">Frontend, React, Javascript</h5>
       </div>
       <Nav className="align-items-end">
         <NavItem className="NavItem">Home</NavItem>

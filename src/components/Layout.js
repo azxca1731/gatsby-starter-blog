@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import '../assets/bootstrap.min.css'
 import { Container, Row, Col } from 'reactstrap'
 import Header from './Header'
+import Footer from './Foooter'
 import RightBar from './RightBar'
 
 class Layout extends React.Component {
@@ -62,6 +63,7 @@ class Layout extends React.Component {
             <RightBar />
           </Col>
         </Row>
+        <Footer />
       </Container>
     )
   }
