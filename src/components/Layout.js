@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import '../assets/bootstrap.min.css'
 import { Container, Row, Col } from 'reactstrap'
 import Header from './Header'
 import Footer from './Foooter'
@@ -31,14 +32,6 @@ class Layout extends React.Component {
     }
     return (
       <Container>
-        <Helmet>
-          >
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          />
-        </Helmet>
         <Header />
         {header}
         <Footer />
