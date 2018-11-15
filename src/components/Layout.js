@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import '../assets/bootstrap.min.css'
+import { Helmet } from 'react-helmet'
 import { Container, Row, Col } from 'reactstrap'
 import Header from './Header'
 import Footer from './Foooter'
@@ -8,53 +7,12 @@ import RightBar from './RightBar'
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
-    return (
-      <Container>
-        <Header />
         <Row>
           <Col xs="12" md="8">
             {children}
@@ -63,6 +21,26 @@ class Layout extends React.Component {
             <RightBar />
           </Col>
         </Row>
+      )
+    } else {
+      header = (
+        <Row>
+          <Col xs="12">{children}</Col>
+        </Row>
+      )
+    }
+    return (
+      <Container>
+        <Helmet>
+          >
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          />
+        </Helmet>
+        <Header />
+        {header}
         <Footer />
       </Container>
     )

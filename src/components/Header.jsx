@@ -1,5 +1,6 @@
 import React from 'react'
 import { Nav, NavItem } from 'reactstrap'
+import { Link } from 'gatsby'
 
 const Header = () => {
   return (
@@ -9,8 +10,12 @@ const Header = () => {
         <h5 className="mt-2">Frontend, React, Javascript</h5>
       </div>
       <Nav className="align-items-end">
-        <NavItem className="NavItem">Home</NavItem>
-        <NavItem>About</NavItem>
+        <Link to="/">
+          <NavItem className="NavItem">Home</NavItem>
+        </Link>
+        <Link to="/">
+          <NavItem className="NavItem">About</NavItem>
+        </Link>
       </Nav>
 
       <style jsx>{`
@@ -24,7 +29,8 @@ const Header = () => {
           padding: 40px;
         }
         .NavItem {
-          margin-right: 10px;
+          margin-left: 10px;
+          color: black;
         }
       `}</style>
     </div>
